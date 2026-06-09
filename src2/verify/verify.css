@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url(../img/prepared-bg.png);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.verify-container {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+}
+
+.logo-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.icon-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.6s ease 0.3s both;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.icon-container.success {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+.icon-container.error {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.icon-container svg {
+    width: 70px;
+    height: 70px;
+    fill: white;
+}
+
+.message-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1A1A1A;
+}
+
+.message-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFF9F0 100%);
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #FFB400;
+    font-weight: 600;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 35px;
+    background: linear-gradient(90deg, #FFB400 0%, #FFC742 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 35px;
+    background: transparent;
+    color: #666;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: 2px solid #e0e0e0;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    border-color: #FFB400;
+    color: #FFB400;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .verify-container {
+        padding: 40px 25px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .icon-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon-container svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .message-title {
+        font-size: 24px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+    }
+}
